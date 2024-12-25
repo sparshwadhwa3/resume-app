@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     resume = {
-        "name": "John Doe",
+        "name": "Sparsh Wadhwa",
         "email": "johndoe@example.com",
         "phone": "(123) 456-7890",
         "education": "B.Sc. in Computer Science",
