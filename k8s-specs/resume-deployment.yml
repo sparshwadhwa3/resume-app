@@ -18,7 +18,7 @@ spec:
       - image: resumecr.azurecr.io/resumeapp:34
         name: resume
         ports:
-        - containerPort: 5000
+        - containerPort: 80
           name: resume
       imagePullSecrets:
       - name: acr-secret

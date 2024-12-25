@@ -7,7 +7,7 @@ app = Flask(__name__)
 def home():
     resume = {
         "name": "Sparsh Wadhwa",
-        "email": "johndoe@example.com",
+        "email": "sparsh@example.com",
         "phone": "(123) 456-7890",
         "education": "B.Sc. in Computer Science",
         "skills": ["Python", "Django", "Docker", "Azure", "Kubernetes"],
