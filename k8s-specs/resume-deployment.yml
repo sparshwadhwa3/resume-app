@@ -15,7 +15,7 @@ spec:
         app: resume
     spec:
       containers:
-      - image: resumecr.azurecr.io/resumeapp:40
+      - image: resumecr.azurecr.io/resumeapp:41
         name: resume
         ports:
         - containerPort: 80
