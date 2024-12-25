@@ -38,7 +38,7 @@ def home():
             },
             {
                 "title": "System Engineer",
-                "company": "Ekaggata Technologies",
+                "company": "ISO New England",
                 "years": "June 2018 – April 2021",
                 "responsibilities": [
                     "Built and maintained Linux-based systems in AWS cloud environments.",
@@ -56,22 +56,30 @@ def home():
     <head>
         <title>Resume</title>
         <style>
-            body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
-            h1, h2, h3 { margin-bottom: 5px; color: #2c3e50; }
-            p, ul { margin-top: 5px; margin-bottom: 15px; }
+            body { font-family: 'Arial', sans-serif; background-color: #f4f4f4; color: #333; margin: 0; padding: 20px; }
+            h1, h2, h3 { color: #2c3e50; }
+            p, ul { margin-top: 5px; margin-bottom: 15px; line-height: 1.6; }
             ul { list-style-type: none; padding: 0; }
             li { margin-bottom: 8px; }
-            .container { max-width: 900px; margin: 0 auto; padding: 10px; }
-            .section { margin-bottom: 30px; }
-            .section-title { background-color: #3498db; color: #fff; padding: 8px; text-align: center; }
-            .contact-info { font-weight: bold; }
+            .container { max-width: 1000px; margin: 0 auto; padding: 20px; background-color: #fff; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); border-radius: 8px; }
+            .section { margin-bottom: 25px; }
+            .section-title { background-color: #3498db; color: white; padding: 10px 15px; font-size: 1.2em; border-radius: 5px; }
+            .section-title-small { background-color: #2980b9; color: white; padding: 5px 10px; font-size: 1em; border-radius: 5px; }
+            .contact-info { font-size: 1.1em; font-weight: bold; }
             .responsibilities { margin-left: 20px; }
+            .contact-info span { display: block; margin-top: 5px; }
+            .skill-list { display: flex; flex-wrap: wrap; gap: 15px; }
+            .skill-item { background-color: #ecf0f1; padding: 8px 15px; border-radius: 5px; }
+            .experience-title { font-weight: bold; }
         </style>
     </head>
     <body>
         <div class="container">
             <h1>{{ resume['name'] }}</h1>
-            <p class="contact-info">Email: {{ resume['email'] }} | Phone: {{ resume['phone'] }}</p>
+            <p class="contact-info">
+                <span>Email: {{ resume['email'] }}</span>
+                <span>Phone: {{ resume['phone'] }}</span>
+            </p>
 
             <div class="section">
                 <h2 class="section-title">Summary</h2>
@@ -89,20 +97,18 @@ def home():
 
             <div class="section">
                 <h2 class="section-title">Technical Skills</h2>
-                <h3>Cloud Platforms</h3>
-                <p>{{ resume['skills']['Cloud Platforms'] }}</p>
-                <h3>DevOps Tools</h3>
-                <p>{{ resume['skills']['DevOps Tools'] }}</p>
-                <h3>Languages</h3>
-                <p>{{ resume['skills']['Languages'] }}</p>
-                <h3>Operating Systems</h3>
-                <p>{{ resume['skills']['Operating Systems'] }}</p>
+                <div class="skill-list">
+                    <div class="skill-item"><strong>Cloud Platforms:</strong> {{ resume['skills']['Cloud Platforms'] }}</div>
+                    <div class="skill-item"><strong>DevOps Tools:</strong> {{ resume['skills']['DevOps Tools'] }}</div>
+                    <div class="skill-item"><strong>Scripting:</strong> {{ resume['skills']['Scripting'] }}</div>
+                    <div class="skill-item"><strong>Operating Systems:</strong> {{ resume['skills']['Operating Systems'] }}</div>
+                </div>
             </div>
 
             <div class="section">
                 <h2 class="section-title">Experience</h2>
                 {% for job in resume['experience'] %}
-                    <h3>{{ job['title'] }} at {{ job['company'] }} ({{ job['years'] }})</h3>
+                    <h3 class="experience-title">{{ job['title'] }} at {{ job['company'] }} ({{ job['years'] }})</h3>
                     <ul class="responsibilities">
                         {% for responsibility in job['responsibilities'] %}
                             <li>{{ responsibility }}</li>
