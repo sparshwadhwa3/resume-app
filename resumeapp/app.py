@@ -10,32 +10,30 @@ def home():
         "email": "sparshwadhwadevops@gmail.com",
         "phone": "+91-8928699025",
         "summary": """
-        Around 6.5 years of IT experience with expertise in AWS, Azure, DevOps, Azure-DevOps, Linux, Shell Scripting, MLOps, and Python.
+        Around 6.5 years of IT experience with expertise in AWS, Azure, DevOps, Azure-DevOps, Linux and Shell Scripting.
         """,
         "certifications": [
             "AWS Certified Solutions Architect Associate",
             "Azure Certified DevOps Engineer",
-            "Azure Certified Data Engineer",
-            "Azure Certified AI Engineer",
             "Red Hat Certified Engineer"
         ],
         "skills": {
             "Cloud Platforms": "AWS, Azure",
-            "DevOps Tools": "Git, Jenkins, Docker, Dockerhub, Ansible, Kubernetes, Terraform, ArgoCD, Prometheus, Grafana, Loki",
-            "Languages": "Bash Shell Scripting, Python",
+            "DevOps Tools": "Git, Jenkins, Docker, Dockerhub, Ansible, Kubernetes, Terraform, ArgoCD, Prometheus, Grafana",
+            "Scripting": "Bash Shell Scripting",
             "Operating Systems": "Linux (Configuration, Troubleshooting, and Administration)"
         },
         "experience": [
             {
-                "title": "Sr. DevOps Engineer",
-                "company": "Ekaggata Technologies",
+                "title": "DevOps Engineer",
+                "company": "ISO New England",
                 "years": "May 2021 – Present",
                 "responsibilities": [
-                    "Implemented MLOps solution using AWS services (CodeCommit, CodeBuild, Lambda, EMR, S3, SNS, CloudWatch, KedroPipeline, and Sagemaker).",
-                    "Implemented CI/CD pipelines with GitHub, Jenkins, Docker, ECR, EKS, ArgoCD, Prometheus, Grafana, and Loki.",
+                    "Implemented CI/CD solution using Azure DevOps (AzureRepo, AzurePipeline, ACR, SelfHosted Agent, AKS, ArgoCD).",
+                    "Implemented CI/CD pipelines with GitHub, Jenkins, Docker, ECR, EKS, ArgoCD, Prometheus, Grafana.",
                     "Automated deployments to EKS using GitOps and ArgoCD, enhancing rollback capabilities.",
                     "Integrated Prometheus and Grafana for Kubernetes (EKS) performance monitoring and dashboarding.",
-                    "Used Loki for centralized log aggregation, improving observability."
+                    "Implemented MLOps solution using AWS services (CodeCommit, CodeBuild, Lambda, EMR, S3, SNS, CloudWatch, KedroPipeline).",
                 ]
             },
             {
