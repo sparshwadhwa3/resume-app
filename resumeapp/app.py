@@ -38,7 +38,7 @@ def home():
             },
             {
                 "title": "System Engineer",
-                "company": "ISO New England",
+                "company": "Ekaggata Technologies",
                 "years": "June 2018 – April 2021",
                 "responsibilities": [
                     "Built and maintained Linux-based systems in AWS cloud environments.",
@@ -56,21 +56,113 @@ def home():
     <head>
         <title>Resume</title>
         <style>
-            body { font-family: 'Arial', sans-serif; background-color: #f4f4f4; color: #333; margin: 0; padding: 20px; }
-            h1, h2, h3 { color: #2c3e50; }
-            p, ul { margin-top: 5px; margin-bottom: 15px; line-height: 1.6; }
-            ul { list-style-type: none; padding: 0; }
-            li { margin-bottom: 8px; }
-            .container { max-width: 1000px; margin: 0 auto; padding: 20px; background-color: #fff; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); border-radius: 8px; }
-            .section { margin-bottom: 25px; }
-            .section-title { background-color: #3498db; color: white; padding: 10px 15px; font-size: 1.2em; border-radius: 5px; }
-            .section-title-small { background-color: #2980b9; color: white; padding: 5px 10px; font-size: 1em; border-radius: 5px; }
-            .contact-info { font-size: 1.1em; font-weight: bold; }
-            .responsibilities { margin-left: 20px; }
-            .contact-info span { display: block; margin-top: 5px; }
-            .skill-list { display: flex; flex-wrap: wrap; gap: 15px; }
-            .skill-item { background-color: #ecf0f1; padding: 8px 15px; border-radius: 5px; }
-            .experience-title { font-weight: bold; }
+            body {
+                font-family: 'Arial', sans-serif;
+                background: linear-gradient(to right, #2980b9, #8e44ad);
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 30px;
+                background-color: #fff;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                margin-top: 40px;
+                border-top: 10px solid #3498db;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 2.5em;
+                color: #2980b9;
+                margin-bottom: 0;
+            }
+
+            p.contact-info {
+                text-align: center;
+                font-size: 1.1em;
+                font-weight: bold;
+                color: #555;
+                margin-bottom: 20px;
+            }
+
+            p.contact-info span {
+                display: inline-block;
+                margin-right: 20px;
+            }
+
+            .section {
+                margin-bottom: 30px;
+            }
+
+            .section-title {
+                background-color: #3498db;
+                color: #fff;
+                padding: 10px;
+                font-size: 1.2em;
+                border-radius: 5px;
+                text-align: center;
+            }
+
+            .section-content {
+                padding: 15px;
+                background-color: #f9f9f9;
+                border-radius: 5px;
+                margin-top: 10px;
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            ul {
+                padding: 0;
+                list-style-type: none;
+            }
+
+            li {
+                margin-bottom: 10px;
+                font-size: 1.1em;
+            }
+
+            .skill-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                margin-top: 15px;
+            }
+
+            .skill-item {
+                background-color: #ecf0f1;
+                padding: 8px 20px;
+                border-radius: 25px;
+                font-size: 1.1em;
+                transition: background-color 0.3s ease;
+            }
+
+            .skill-item:hover {
+                background-color: #3498db;
+                color: white;
+            }
+
+            .experience-title {
+                font-weight: bold;
+                font-size: 1.3em;
+                color: #2980b9;
+            }
+
+            .responsibilities {
+                margin-left: 20px;
+            }
+
+            footer {
+                text-align: center;
+                margin-top: 40px;
+                font-size: 1.2em;
+                color: #555;
+            }
+
         </style>
     </head>
     <body>
@@ -83,45 +175,59 @@ def home():
 
             <div class="section">
                 <h2 class="section-title">Summary</h2>
-                <p>{{ resume['summary'] }}</p>
+                <div class="section-content">
+                    <p>{{ resume['summary'] }}</p>
+                </div>
             </div>
 
             <div class="section">
                 <h2 class="section-title">Certifications</h2>
-                <ul>
-                    {% for certification in resume['certifications'] %}
-                        <li>{{ certification }}</li>
-                    {% endfor %}
-                </ul>
+                <div class="section-content">
+                    <ul>
+                        {% for certification in resume['certifications'] %}
+                            <li>{{ certification }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
 
             <div class="section">
                 <h2 class="section-title">Technical Skills</h2>
-                <div class="skill-list">
-                    <div class="skill-item"><strong>Cloud Platforms:</strong> {{ resume['skills']['Cloud Platforms'] }}</div>
-                    <div class="skill-item"><strong>DevOps Tools:</strong> {{ resume['skills']['DevOps Tools'] }}</div>
-                    <div class="skill-item"><strong>Scripting:</strong> {{ resume['skills']['Scripting'] }}</div>
-                    <div class="skill-item"><strong>Operating Systems:</strong> {{ resume['skills']['Operating Systems'] }}</div>
+                <div class="section-content">
+                    <div class="skill-list">
+                        <div class="skill-item"><strong>Cloud Platforms:</strong> {{ resume['skills']['Cloud Platforms'] }}</div>
+                        <div class="skill-item"><strong>DevOps Tools:</strong> {{ resume['skills']['DevOps Tools'] }}</div>
+                        <div class="skill-item"><strong>Scripting:</strong> {{ resume['skills']['Scripting'] }}</div>
+                        <div class="skill-item"><strong>Operating Systems:</strong> {{ resume['skills']['Operating Systems'] }}</div>
+                    </div>
                 </div>
             </div>
 
             <div class="section">
                 <h2 class="section-title">Experience</h2>
-                {% for job in resume['experience'] %}
-                    <h3 class="experience-title">{{ job['title'] }} at {{ job['company'] }} ({{ job['years'] }})</h3>
-                    <ul class="responsibilities">
-                        {% for responsibility in job['responsibilities'] %}
-                            <li>{{ responsibility }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endfor %}
+                <div class="section-content">
+                    {% for job in resume['experience'] %}
+                        <h3 class="experience-title">{{ job['title'] }} at {{ job['company'] }} ({{ job['years'] }})</h3>
+                        <ul class="responsibilities">
+                            {% for responsibility in job['responsibilities'] %}
+                                <li>{{ responsibility }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endfor %}
+                </div>
             </div>
 
             <div class="section">
                 <h2 class="section-title">Education</h2>
-                <p>{{ resume['education'] }}</p>
+                <div class="section-content">
+                    <p>{{ resume['education'] }}</p>
+                </div>
             </div>
         </div>
+
+        <footer>
+            <p>&copy; 2024 Sparsh Wadhwa</p>
+        </footer>
     </body>
     </html>
     """
