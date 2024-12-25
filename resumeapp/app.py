@@ -57,11 +57,12 @@ def home():
         <title>Resume</title>
         <style>
             body {
-                font-family: 'Arial', sans-serif;
-                background: linear-gradient(to right, #2980b9, #8e44ad);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(to right, #ff6f61, #6a11cb);
                 color: #333;
                 margin: 0;
                 padding: 0;
+                height: 100vh;
             }
 
             .container {
@@ -69,7 +70,7 @@ def home():
                 margin: 0 auto;
                 padding: 30px;
                 background-color: #fff;
-                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
                 border-radius: 8px;
                 margin-top: 40px;
                 border-top: 10px solid #3498db;
@@ -78,8 +79,9 @@ def home():
             h1 {
                 text-align: center;
                 font-size: 2.5em;
-                color: #2980b9;
+                color: #3498db;
                 margin-bottom: 0;
+                text-transform: uppercase;
             }
 
             p.contact-info {
@@ -149,7 +151,7 @@ def home():
             .experience-title {
                 font-weight: bold;
                 font-size: 1.3em;
-                color: #2980b9;
+                color: #3498db;
             }
 
             .responsibilities {
@@ -161,6 +163,28 @@ def home():
                 margin-top: 40px;
                 font-size: 1.2em;
                 color: #555;
+                background-color: #3498db;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            @media (max-width: 768px) {
+                .container {
+                    padding: 20px;
+                }
+
+                h1 {
+                    font-size: 2em;
+                }
+
+                .section-title {
+                    font-size: 1.1em;
+                }
+
+                .section-content {
+                    padding: 10px;
+                }
             }
 
         </style>
