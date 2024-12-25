@@ -38,7 +38,7 @@ def home():
             },
             {
                 "title": "System Engineer",
-                "company": "Ekaggata Technologies",
+                "company": "ISO New England",
                 "years": "June 2018 – April 2021",
                 "responsibilities": [
                     "Built and maintained Linux-based systems in AWS cloud environments.",
