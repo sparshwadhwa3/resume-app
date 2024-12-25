@@ -44,6 +44,12 @@ def home():
     
     return render_template_string(html_template, resume=resume)
 
+# Health check route for readiness and liveness probes
+@app.route("/health")
+def health():
+    # This is a simple check, returning a 200 OK response
+    return "OK", 200
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=80)
 
